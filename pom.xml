@@ -17,7 +17,7 @@
   <properties>
     <java.version>11</java.version>
 
-    <sonar.projectKey>sekkycodes_softwarequest</sonar.projectKey>
+    <sonar.projectKey>sekkycodes_software-quest</sonar.projectKey>
     <sonar.organization>sekkycodes</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
