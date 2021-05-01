@@ -1,27 +1,29 @@
-package com.github.sekkycodes.softwarequest.domain.vos;
+package com.github.sekkycodes.softwarequest.domain.commands;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import java.util.UUID;
 import lombok.Builder;
 import lombok.Value;
 
 /**
- * Immutable value representation of Quest aggregate
+ * Command for creating a new quest
  */
 @Value
 @Builder(toBuilder = true)
 @JsonAutoDetect(fieldVisibility = Visibility.ANY)
-@JsonDeserialize(builder = QuestVO.QuestVOBuilder.class)
-public class QuestVO {
+@JsonDeserialize(builder = CreateNewQuest.CreateNewQuestBuilder.class)
+public class CreateNewQuest implements DomainCommand {
 
-  String id;
-
+  UUID id;
+  UUID correlationId;
   String name;
 
   @JsonPOJOBuilder(withPrefix = "")
-  public static class QuestVOBuilder {
+  public static class CreateNewQuestBuilder {
 
   }
+
 }

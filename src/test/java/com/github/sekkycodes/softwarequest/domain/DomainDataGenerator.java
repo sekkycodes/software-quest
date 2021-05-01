@@ -20,6 +20,7 @@ public class DomainDataGenerator {
     public Quest buildQuest() {
       return Quest.builder()
           .id(ObjectId.get())
+          .name("dummyQuest")
           .build();
     }
   }

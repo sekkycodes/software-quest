@@ -20,9 +20,12 @@ public class Quest implements DomainAggregate {
 
   private ObjectId id;
 
+  private String name;
+
   public QuestVO toValueObject() {
     return QuestVO.builder()
-        .id(id.toString())
+        .id(getId().toString())
+        .name(getName())
         .build();
   }
 }

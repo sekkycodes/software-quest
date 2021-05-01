@@ -26,6 +26,7 @@ class QuestTest {
       QuestVO vo = sut.toValueObject();
 
       assertThat(sut.getId().toString()).isEqualTo(vo.getId());
+      assertThat(sut.getName()).isEqualTo(vo.getName());
     }
   }
 }
