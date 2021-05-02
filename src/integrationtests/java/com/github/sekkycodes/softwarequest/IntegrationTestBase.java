@@ -2,6 +2,7 @@ package com.github.sekkycodes.softwarequest;
 
 import com.github.sekkycodes.softwarequest.domain.DomainDataGenerator;
 import com.github.sekkycodes.softwarequest.repositories.QuestRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +19,11 @@ public class IntegrationTestBase {
 
   @BeforeEach
   void beforeEachTestMethod() {
+    emptyRepositories();
+  }
+
+  @AfterEach
+  void afterEachTestMethod() {
     emptyRepositories();
   }
 
