@@ -25,7 +25,7 @@ class QuestTest {
     void convertsEntityToValueObject() {
       QuestVO vo = sut.toValueObject();
 
-      assertThat(sut.getId().toString()).isEqualTo(vo.getId());
+      assertThat(sut.getId()).hasToString(vo.getId());
       assertThat(sut.getName()).isEqualTo(vo.getName());
     }
   }

@@ -46,7 +46,6 @@ class QuestControllerTest extends IntegrationTestBase {
       assertThat(response.getStatusCodeValue()).isEqualTo(HttpStatus.OK.value());
       assertThat(response.getBody()).isNotNull();
       assertThat(response.getBody().getValue().getName()).isEqualTo(quest.getName());
-
     }
   }
 }

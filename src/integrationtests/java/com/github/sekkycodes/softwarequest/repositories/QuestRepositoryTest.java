@@ -12,7 +12,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
-public class QuestRepositoryTest extends IntegrationTestBase {
+class QuestRepositoryTest extends IntegrationTestBase {
 
   @Test
   void savesQuestAggregateToDatabase() {
